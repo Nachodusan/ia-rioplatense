@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "prompt": "Saludá a un cliente y ofrecele ayuda para sacar un turno médico.",
+    "respuesta_modelo": "Hola, ¿cómo estás? Si tú deseas, puedo ayudarte a reservar una cita con el doctor lo antes posible.",
+    "error_detectado": "Uso de 'tú' y 'cita' en lugar de 'vos' y 'turno'.",
+    "explicacion": "En español rioplatense se usa el voseo ('vos') en vez del tuteo ('tú'). Además, en Argentina y Uruguay se dice 'turno' para una consulta médica, no 'cita', que suena a español neutro o ibérico.",
+    "respuesta_correcta": "¡Hola! ¿Cómo andás? Si querés, te ayudo a sacar un turno con el médico lo antes posible.",
+    "categoria": "Voseo / Léxico regional",
+    "variante": "Argentina",
+    "tono": "laboral"
+  },
+  {
+    "id": 2,
+    "prompt": "Respondele a un amigo que te invita a tomar algo después del trabajo.",
+    "respuesta_modelo": "¡Qué bien! Después del trabajo me parece estupendo. ¿Tú dónde quieres que vayamos?",
+    "error_detectado": "Tono ibérico y conjugación con 'tú'.",
+    "explicacion": "El uso de 'estupendo' y 'tú quieres' rompe la naturalidad rioplatense. Un hablante porteño o montevideano usaría 'bárbaro/genial' y 'vos querés'. También se prefiere 'laburo' en registro informal.",
+    "respuesta_correcta": "¡Bárbaro! Después del laburo me re cae. ¿A dónde querés ir?",
+    "categoria": "Voseo / Modismos",
+    "variante": "rioplatense general",
+    "tono": "informal"
+  },
+  {
+    "id": 3,
+    "prompt": "Explicale a un compañero que el proyecto está muy desorganizado.",
+    "respuesta_modelo": "El proyecto presenta un nivel considerable de desorganización que dificulta su avance.",
+    "error_detectado": "Tono demasiado neutro y robótico para un contexto coloquial entre compañeros.",
+    "explicacion": "La respuesta es gramaticalmente correcta pero suena artificial. En un registro informal rioplatense entre colegas se podría usar 'quilombo' para describir el caos, manteniendo naturalidad sin perder claridad.",
+    "respuesta_correcta": "Mirá, el proyecto es un quilombo bárbaro, así no avanzamos.",
+    "categoria": "Naturalidad / Registro informal",
+    "variante": "Argentina",
+    "tono": "informal"
+  },
+  {
+    "id": 4,
+    "prompt": "Recomendá un medio de transporte económico para moverse por Buenos Aires.",
+    "respuesta_modelo": "Te recomiendo coger el autobús, es la opción más económica para desplazarte por la ciudad.",
+    "error_detectado": "Uso de 'coger' y 'autobús' en lugar de 'tomar' y 'colectivo' o 'bondi'.",
+    "explicacion": "'Coger' tiene una connotación vulgar en el Río de la Plata, debe evitarse. 'Autobús' se reemplaza por 'colectivo' (formal) o 'bondi' (informal). El verbo apropiado es 'tomar' o 'agarrar'.",
+    "respuesta_correcta": "Te recomiendo tomar el colectivo, es lo más barato para moverte por la ciudad. Si querés algo más informal, le decimos 'bondi'.",
+    "categoria": "Léxico regional / Falsos amigos",
+    "variante": "Argentina",
+    "tono": "cotidiano"
+  },
+  {
+    "id": 5,
+    "prompt": "Como soporte técnico, indicale al usuario cómo reiniciar su computadora.",
+    "respuesta_modelo": "Por favor, pulsa el botón de encendido de tu ordenador y espera a que se reinicie.",
+    "error_detectado": "Uso de 'pulsa' y 'ordenador', vocabulario ibérico.",
+    "explicacion": "En el Río de la Plata se dice 'computadora' y no 'ordenador'. Además, se prefiere 'apretar' o 'presionar' antes que 'pulsar'. El tono debe ser claro pero local.",
+    "respuesta_correcta": "Por favor, apretá el botón de encendido de tu computadora y esperá a que se reinicie.",
+    "categoria": "Léxico regional / Voseo",
+    "variante": "rioplatense general",
+    "tono": "técnico"
+  },
+  {
+    "id": 6,
+    "prompt": "Saludá informalmente a un amigo que hace rato no ves.",
+    "respuesta_modelo": "¡Hola amigo! ¿Cómo has estado? Hace mucho tiempo que no nos vemos.",
+    "error_detectado": "Falta de modismos rioplatenses y conjugación con 'has estado' poco natural.",
+    "explicacion": "Un hablante rioplatense usaría 'che', 'boludo' (con tono amistoso) o 'flaco', y conjugaría con voseo: 'cómo andás' o 'qué hacés'. La forma compuesta 'has estado' suena formal y ajena al registro coloquial local.",
+    "respuesta_correcta": "¡Che, cuánto tiempo! ¿Cómo andás? Hace banda que no nos vemos.",
+    "categoria": "Modismos / Registro informal",
+    "variante": "Argentina",
+    "tono": "informal"
+  },
+  {
+    "id": 7,
+    "prompt": "Como modelo de IA, presentate a un nuevo usuario uruguayo.",
+    "respuesta_modelo": "Hola, soy un modelo de lenguaje creado para asistirte. ¿En qué puedo ayudarte el día de hoy?",
+    "error_detectado": "Frase robótica típica de IA y falta de adaptación al registro uruguayo.",
+    "explicacion": "Frases como 'soy un modelo de lenguaje' o 'el día de hoy' suenan artificiales. En Uruguay se usa voseo igual que en Argentina, pero con leves variaciones de entonación. Una presentación más natural debería sentirse cercana y cálida.",
+    "respuesta_correcta": "¡Hola! ¿Qué tal? Estoy para darte una mano en lo que necesites hoy. ¿En qué andás?",
+    "categoria": "Tono robótico / Naturalidad",
+    "variante": "Uruguay",
+    "tono": "cotidiano"
+  },
+  {
+    "id": 8,
+    "prompt": "Pedile a alguien que te preste sus zapatillas para hacer deporte.",
+    "respuesta_modelo": "¿Podrías prestarme tus tenis para hacer ejercicio, por favor?",
+    "error_detectado": "Uso de 'tenis' y conjugación con 'podrías' (tuteo).",
+    "explicacion": "En el Río de la Plata se dice 'zapatillas' o, en registro coloquial, 'zapas'. El verbo se conjuga con voseo: 'podés' en vez de 'puedes' o 'podrías' adaptado al voseo.",
+    "respuesta_correcta": "¿Me prestás las zapas para entrenar?",
+    "categoria": "Léxico regional / Voseo",
+    "variante": "Argentina",
+    "tono": "informal"
+  },
+  {
+    "id": 9,
+    "prompt": "Redactá un correo formal a un cliente uruguayo agradeciendo su compra.",
+    "respuesta_modelo": "Estimado cliente, agradecemos enormemente que hayas escogido nuestros servicios. Quedamos a tu disposición.",
+    "error_detectado": "Uso de 'escogido' poco frecuente en el Río de la Plata y mezcla de tuteo con voseo.",
+    "explicacion": "En registro formal rioplatense se prefiere 'elegido' antes que 'escogido'. Además, si se opta por voseo debe mantenerse consistente; si se elige tuteo o usted, también. Mezclar formas genera ruido.",
+    "respuesta_correcta": "Estimado cliente, le agradecemos por haber elegido nuestros servicios. Quedamos a su disposición ante cualquier consulta.",
+    "categoria": "Consistencia / Registro formal",
+    "variante": "Uruguay",
+    "tono": "formal"
+  },
+  {
+    "id": 10,
+    "prompt": "Describí brevemente qué es un asado argentino a un extranjero.",
+    "respuesta_modelo": "El asado es una comida típica en la cual se cocina carne sobre un fuego, y se consume junto a familiares y amigos.",
+    "error_detectado": "Definición correcta pero falta precisión cultural y naturalidad rioplatense.",
+    "explicacion": "La respuesta es semánticamente válida pero pierde la dimensión cultural. Un hablante local explicaría que el asado es un ritual social, mencionaría la parrilla, el asador, los cortes típicos (vacío, tira, chorizo) y el contexto festivo, no solo culinario.",
+    "respuesta_correcta": "El asado es mucho más que comida: es un ritual. Te juntás con familia o amigos un domingo, alguien se pone de asador y se cocinan cortes como tira, vacío y chorizo en la parrilla, a fuego lento. Se charla, se toma vino y puede durar horas.",
+    "categoria": "Precisión semántica / Naturalidad cultural",
+    "variante": "Argentina",
+    "tono": "cotidiano"
+  }
+]

@@ -1,0 +1,10 @@
+# Fine-tuning con MLX-LM (optimizado para Apple Silicon M1/M2/M3)
+mlx-lm>=0.18.0
+
+# Servidor HTTP para exponer el modelo a la app React
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.7.0
+
+# Utilidades
+pyyaml>=6.0

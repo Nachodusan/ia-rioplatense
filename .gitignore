@@ -1,0 +1,81 @@
+# ============================================================================
+# Dependencias (se reinstalan vía setup.sh)
+# ============================================================================
+node_modules/
+**/.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# ============================================================================
+# Modelos y caches pesados (se bajan en setup.sh, NO al repo)
+# ============================================================================
+# Piper voice (~114 MB) — se descarga vía setup.sh
+tts_server/piper_voices/*.onnx
+tts_server/piper_voices/*.onnx.json
+tts_server/samples/
+tts_server/cache/
+
+# Modelos MLX / LoRA adapters viejos
+ai-training/adapters/*
+!ai-training/adapters/.gitkeep
+ai-training/adapters_*/
+ai-training/.cache/
+
+# HuggingFace cache (por si alguien copia local)
+.cache/huggingface/
+
+# ============================================================================
+# Build / dist
+# ============================================================================
+dist/
+dist-ssr/
+build/
+.vite/
+*.tsbuildinfo
+
+# ============================================================================
+# Logs y temporales
+# ============================================================================
+*.log
+*.tmp
+*.local
+.DS_Store
+Thumbs.db
+
+# Audios de prueba
+test_*.mp3
+franco_*.mp3
+daniela_*.mp3
+stream_*.mp3
+full_test.mp3
+*.mp3.tmp
+
+# ============================================================================
+# Editor / IDE
+# ============================================================================
+.vscode/
+.idea/
+*.swp
+*~
+
+# ============================================================================
+# Notas internas del workflow (Claude Code planes)
+# ============================================================================
+.claude/
+
+# ============================================================================
+# Datasets de backup (la versión actual queda en train.jsonl)
+# ============================================================================
+ai-training/data/*.bak
+ai-training/data/*.v3bak
+
+# ============================================================================
+# Env / secretos
+# ============================================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key

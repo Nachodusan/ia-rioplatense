@@ -1,0 +1,7 @@
+# Piper TTS — voz local rápida (ONNX, CPU)
+piper-tts>=1.4.0
+
+# Servidor HTTP
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.7.0

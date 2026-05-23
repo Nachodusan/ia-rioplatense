@@ -1,0 +1,48 @@
+# =====================================================================
+# Configuración LoRA para fine-tuning rioplatense con MLX-LM
+# =====================================================================
+# LoRA (Low-Rank Adaptation) entrena sólo un pequeño conjunto de matrices
+# de bajo rango sobre el modelo base, manteniendo los pesos originales
+# congelados. Resultado: archivos de adaptador chicos (~10-50 MB) que
+# capturan el estilo rioplatense sin tener que re-entrenar todo.
+# =====================================================================
+
+# ----- Modelo base -----
+# Opciones recomendadas (elegí UNA y ponela en train.sh):
+#
+#   1. mlx-community/Phi-3.5-mini-instruct-4bit   (3.8B params, ~2.4 GB)
+#      - Más chico y rápido. Ideal para Mac con 8-16 GB de RAM.
+#      - Español aceptable, mejora notablemente con fine-tuning.
+#
+#   2. mlx-community/Mistral-7B-Instruct-v0.3-4bit  (7B params, ~4.1 GB)
+#      - Mejor calidad de español de base. Recomendado si tenés 16+ GB.
+#
+#   3. mlx-community/Meta-Llama-3.1-8B-Instruct-4bit  (8B, ~4.6 GB)
+#      - Excelente español, pero pide al menos 24 GB de RAM unificada.
+
+# ----- LoRA -----
+# v4: parámetros conservadores que funcionaron en v2
+fine_tune_type: lora
+num_layers: 16
+lora_parameters:
+  rank: 16                    # rank conservador (funcionó mejor que 32 en v2)
+  scale: 16.0
+  dropout: 0.05
+
+# ----- Entrenamiento -----
+batch_size: 1
+iters: 700                    # 319 ejemplos × ~2.2 epochs = sweet spot
+learning_rate: 1.0e-5         # lr más bajo y estable
+val_batches: 8
+steps_per_report: 50
+steps_per_eval: 100
+save_every: 100
+adapter_path: ./adapters
+
+# ----- Datos -----
+data: ./data                  # carpeta con train.jsonl y valid.jsonl
+max_seq_length: 1024
+
+# ----- Optimización -----
+grad_checkpoint: true         # ahorra memoria a costa de un poco de velocidad
+seed: 42
